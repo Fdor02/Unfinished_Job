@@ -215,3 +215,43 @@ input[type="email"] {
 .modal-header, .modal-footer {
     border-color: #444444; 
 }
+
+.join-club-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333333;
+    padding: 20px;
+    border: 1px solid #444444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1050; /* Ensure this is high enough */
+    color: #ffffff;
+    width: 300px;
+}
+
+.join-club-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.join-club-form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #444444;
+    border: 1px solid #555555;
+    color: #ffffff;
+    z-index: 1060; /* Ensure inputs are above other elements */
+}
+
+.join-club-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: #2e4b2e;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
