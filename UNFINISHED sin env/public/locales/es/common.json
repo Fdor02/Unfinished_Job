@@ -1,0 +1,19 @@
+{
+    "cart": "Carrito",
+    "your_cart": "Tu Carrito",
+    "no_items": "No hay artículos",
+    "enter_email": "Ingresar Correo",
+    "enter_your_email": "Ingresa tu correo",
+    "submit": "Enviar",
+    "back_to_products": "Volver a Productos",
+    "remove": "Eliminar",
+    "username": "Nombre de Usuario",
+    "enter_username": "Ingresa nombre de usuario",
+    "password": "Contraseña",
+    "enter_password": "Ingresa contraseña",
+    "login": "Iniciar Sesión",
+    "join_the_club": "Únete al Club",
+    "product_details": "Detalles del Producto",
+    "details_about_product": "Los detalles sobre el producto se mostrarán aquí.",
+    "close": "Cerrar"
+}
