@@ -16,7 +16,7 @@ export default function HomePage() {
     const router = useRouter();
 
     const [cart, setCart] = useState([]);
-    const [countdown, setCountdown] = useState(5); // Cambia a 5 para pruebas
+    const [countdown, setCountdown] = useState(5); 
     const [showEmailSection, setShowEmailSection] = useState(false);
     const [showProducts, setShowProducts] = useState(false);
     const [showCart, setShowCart] = useState(false);
@@ -81,7 +81,7 @@ export default function HomePage() {
 
             if (response.ok) {
                 setMessage('Inicio de sesión exitoso');
-                // Aquí puedes redirigir al usuario a otra página si lo deseas
+                
             } else {
                 setMessage(data.message || 'Error en el inicio de sesión');
             }
@@ -211,7 +211,7 @@ export default function HomePage() {
                                     type="button" 
                                     className="btn btn-secondary" 
                                     id="join-club-button" 
-                                    onClick={() => router.push('/register')} // Redirige a la página de registro
+                                    onClick={() => router.push('/register')} 
                                     style={{ marginLeft: '10px' }}
                                 >
                                     {t('join_the_club')}
