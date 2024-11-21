@@ -1,0 +1,22 @@
+{
+    "cart": "Cart",
+    "your_cart": "Your Cart",
+    "no_items": "No items",
+    "enter_email": "Enter Email",
+    "enter_your_email": "Enter your email",
+    "submit": "Submit",
+    "back_to_products": "Back to Products",
+    "remove": "Remove",
+    "username": "Username",
+    "enter_username": "Enter username",
+    "password": "Password",
+    "enter_password": "Enter password",
+    "login": "Login",
+    "join_the_club": "Join the Club",
+    "product_details": "Product Details",
+    "details_about_product": "Details about the product will be displayed here.",
+    "close": "Close",
+    "email_registered": "Email registered successfully",
+    "invalid_email": "Invalid email"
+
+}
