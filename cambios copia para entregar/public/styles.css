@@ -1,0 +1,304 @@
+/* Importar la fuente Permanent Marker */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Permanent Marker', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    text-transform: uppercase;
+    /* Se quitan display:flex y align-items/justify-content aquí 
+       para no afectar el layout de los productos */
+}
+
+/* Contenedor central para el contenido que no son productos */
+.central-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mantiene el contenido centrado verticalmente */
+}
+
+/* Contenedor genérico */
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Aplicar la tipografía a todos los botones y enlaces */
+button, 
+#show-email, 
+#submit-email, 
+.add-to-cart, 
+#translate-button, 
+#back-to-products, 
+#login-button, 
+.modal-content button {
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+/* Estilo del logo */
+#logo.large {
+    font-size: clamp(80px, 10vw, 120px);
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+#logo.small {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px auto;
+    transition: font-size 0.5s ease, top 0.5s ease;
+    text-align: center;
+}
+
+#logo:hover {
+    color: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* Temporizador */
+#timer {
+    font-size: clamp(40px, 5vw, 100px);
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Botones de la interfaz */
+#show-email,
+#submit-email,
+.add-to-cart,
+#translate-button,
+#back-to-products {
+    background-color: #dc3545;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#show-email:hover,
+#submit-email:hover,
+.add-to-cart:hover,
+#translate-button:hover,
+#back-to-products:hover {
+    background-color: #c82333;
+}
+
+/* Campo de email */
+#email-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#email-section input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    max-width: 100%;
+}
+
+/* Ajustes para la colección de productos */
+#collection-component .shopify-buy__collection {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    padding: 20px !important;
+    justify-content: flex-start !important;
+    width: 100% !important; /* Muy importante para ocupar todo el ancho disponible */
+}
+
+/* Estilo individual de cada producto */
+#collection-component .shopify-buy__collection-item {
+    background-color: #333333 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    text-align: left !important;
+    color: white !important;
+    font-size: 16px !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsive para productos */
+/* Móviles: 1 columna */
+@media (max-width: 768px) {
+    #collection-component .shopify-buy__collection-item {
+        flex: 0 0 100% !important;
+    }
+}
+
+/* Tablets: 2 columnas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #collection-component .shopify-buy__collection-item {
+        flex: 0 0 calc(50% - 20px) !important;
+    }
+}
+
+/* Escritorio: 3 columnas */
+@media (min-width: 1025px) {
+    #collection-component .shopify-buy__collection-item {
+        flex: 0 0 calc(33.333% - 20px) !important;
+    }
+}
+
+/* Botón de traducción */
+#translate-button {
+    background-color: #D32F2F;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#translate-button:hover {
+    background-color: #C62828;
+}
+
+/* Modal de Login */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    color: #fb0909;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.modal-header .close {
+    margin-left: auto;
+    color: #f60505;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.modal-content button {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Botón de "Join the Club" */
+#join-club-button {
+    background-color: #dc3545;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#join-club-button:hover {
+    background-color: #c82333;
+}
+
+/* Nuevas Clases para Mensajes */
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Diseño responsivo general */
+@media (max-width: 768px) {
+    #logo.large, #logo.small {
+        font-size: 40px;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+
+    #timer {
+        font-size: 30px;
+    }
+
+    #translate-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #logo.large, #logo.small {
+        font-size: 60px;
+    }
+
+    #timer {
+        font-size: 40px;
+    }
+}
